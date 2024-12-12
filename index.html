@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.webp" type="image/x-icon">
+    <title>Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <header class="bg-white shadow-md sticky top-0 z-50 p-5 flex justify-between items-center">
+        <div class="logo">
+            <img src="mylogo.webp" alt="Logo" class="h-12">
+        </div>
+        <nav class="flex gap-6 items-center">
+            <a href="index.html" class="text-gray-800 font-semibold hover:text-green-500">Beranda</a>
+            <a href="Mybiodata.html" class="text-gray-800 font-semibold hover:text-green-500">Biodata</a>
+            <a href="contact.html" class="text-gray-800 font-semibold hover:text-green-500">Hubungi Kami</a>
+            <a href="free_content.html" class="text-gray-800 font-semibold hover:text-green-500">Halaman Gratis</a>
+            <a href="posts.html" class="hover:text-gray-300">Posts</a>
+
+            <!-- Search bar -->
+            <div class="flex items-center gap-2">
+                <input type="text" placeholder="Cari di situs..." class="px-3 py-2 rounded-md border border-gray-300 w-48">
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Cari</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="relative">
+        <img src="food estate.jpg" alt="Food Estate Image" class="w-full h-auto object-cover filter brightness-50">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white max-w-lg px-6">
+            <h1 class="absolute top-1/2 translate-y-[-450%] text-4xl font-bold border-b-2">WELCOME TO JORDAN PROJECT</h1>
+            <h1 class="text-4xl font-bold">Tiga Tahun Food Estate Jadi Apa?</h1>
+            <p class="text-lg my-4">Program lumbung pangan pemerintah atau food estate memicu berbagai persoalan lingkungan...</p>
+            <a href="#" class="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold hover:bg-yellow-400">Kunjungi Web Interaktif</a>
+        </div>
+    </div>
+
+    <!-- Artikel Terbaru Section -->
+    <div class="py-8 px-6 max-w-7xl mx-auto space-y-8">
+        <h2 class="text-2xl font-semibold">Artikel Terbaru</h2>
+
+        <!-- Artikel Section -->
+        <div class="space-y-8">
+            <!-- Artikel 1 -->
+            <div class="flex space-x-6">
+                <img src="gambarsatu.webp" alt="Artikel 1 Image" class="w-1/3 h-64 object-cover rounded-lg shadow-lg">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-600"><a href="#" class="hover:text-green-500">Siaran Pers</a> · #Aktivisme #Demokrasi #Hutan #Iklim</p>
+                    <h3 class="text-xl font-semibold mt-2">Menjelang Pelantikan Prabowo-Gibran, Greenpeace Ajak Publik Terus Bersuara</h3>
+                    <p class="text-gray-800 mt-2">Menjelang pelantikan Prabowo-Gibran, Greenpeace mengajak publik untuk terus #MemilihBersuara...</p>
+                    <p class="text-sm text-gray-600 mt-2">Greenpeace Indonesia · 19 Oktober 2024</p>
+                </div>
+            </div>
+
+            <!-- Artikel 2 -->
+            <div class="flex space-x-6">
+                <img src="gambardua.jpg" alt="Artikel 2 Image" class="w-1/3 h-64 object-cover rounded-lg shadow-lg">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-600"><a href="#" class="hover:text-green-500">Cerita</a> · #Laut</p>
+                    <h3 class="text-xl font-semibold mt-2">Temu Akbar Masyarakat Pesisir 2024: Menyuarakan Keadilan dan Ratifikasi ILO C-188</h3>
+                    <p class="text-gray-800 mt-2">Di sebuah ruangan yang tak begitu luas di Kebon Sirih, Jakarta Pusat...</p>
+                    <p class="text-sm text-gray-600 mt-2">Gilang Ramadhan · 17 Oktober 2024</p>
+                </div>
+            </div>
+
+            <!-- Artikel 3 -->
+            <div class="flex space-x-6">
+                <img src="gambartiga.jpg" alt="Artikel 3 Image" class="w-1/3 h-64 object-cover rounded-lg shadow-lg">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-600"><a href="#" class="hover:text-green-500">Laporan</a> · #Hutan</p>
+                    <h3 class="text-xl font-semibold mt-2">Bagai Api Dalam "Sekam" Data, Karhutla Kronis 2023</h3>
+                    <p class="text-gray-800 mt-2">Menteri Lingkungan Hidup dan Kehutanan mengklaim telah ‘berhasil’ meredam angka kebakaran hutan...</p>
+                    <p class="text-sm text-gray-600 mt-2">Greenpeace Indonesia · 16 Oktober 2024</p>
+                </div>
+            </div>
+
+            <!-- Artikel 4 -->
+            <div class="flex space-x-6">
+                <img src="gambarempat.jpg" alt="Artikel 4 Image" class="w-1/3 h-64 object-cover rounded-lg shadow-lg">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-600"><a href="#" class="hover:text-green-500">Blog</a> · #Hutan #Iklim #Energi</p>
+                    <h3 class="text-xl font-semibold mt-2">Pemilu 2024, Uji “Hijau” Para Kandidat</h3>
+                    <p class="text-gray-800 mt-2">Tahun politik, masyarakat terus dibanjiri dengan informasi tentang pencapaian dan janji-janji manis...</p>
+                    <p class="text-sm text-gray-600 mt-2">Citra Sari · 12 Oktober 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold hover:bg-yellow-400">Baca Lebih Lanjut</a>
+    </div>
+    
+    <div class="container mx-auto px-4 py-8 bg-[#EBEBEB] border border-gray-300 rounded-lg w-[1230px] mt-[90px]">
+        <h1 class="text-3xl font-bold  mb-8">Bersama kita bisa membuat perubahan.</h1>
+        <p class="text-lg  mb-12">Bergabung sekarang untuk mendapatkan informasi terbaru seputar kampanye lingkungan.</p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <div class="w-full md:w-1/3">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email *</label>
+                <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="">
+            </div>
+            <div class="w-full md:w-1/3">
+                <label for="first-name" class="block text-gray-700 font-bold mb-2">Nama Depan</label>
+                <input type="text" id="first-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="">
+            </div>
+            <div class="w-full md:w-1/3">
+                <label for="last-name" class="block text-gray-700 font-bold mb-2">Nama Belakang</label>
+                <input type="text" id="last-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="">
+            </div>
+        </div>
+        <p class="mt-[60px]">
+            Greenpeace Southeast Asia memerlukan informasi kontak yang Anda berikan kepada kami untuk menghubungi Anda tentang produk dan layanan kami. Anda dapat berhenti berlangganan dari komunikasi ini kapan pun. Untuk informasi tentang cara berhenti berlangganan, serta praktik privasi dan komitmen kami untuk melindungi privasi Anda, tinjau Kebijakan Privasi kami.
+        </p>
+        <div class="mt-4">
+            <button class="bg-[#FF7163] text-white font-bold py-2 px-4 rounded">
+                Bergabung Sekarang
+            </button>
+        </div>
+    </div>
+    
+
+
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg">Tentang Kami</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-green-500">Kontak</a></li>
+                        <li><a href="#" class="hover:text-green-500">Bekerja di Greenpeace</a></li>
+                        <li><a href="#" class="hover:text-green-500">Pers</a></li>
+                        <li><a href="#" class="hover:text-green-500">Supporter Care</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Kebijakan Privasi</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-green-500">Hak Cipta</a></li>
+                        <li><a href="#" class="hover:text-green-500">Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-sm">Follow Us</p>
+                    <a href="#" class="text-indigo-400 hover:text-indigo-500"><img src="follow.png" alt="Follow Us"></a>
+                    <a href="https://unai.edu/" target="_blank" class="text-indigo-500 hover:text-indigo-600 font-semibold">
+                        UNAI
+
+                    </a>
+                    <a href="https://fti.unai.edu/" target="_blank" class="text-indigo-500 hover:text-indigo-600 font-semibold">
+                        FTI UNAI
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-6 text-sm">
+                <p>Greenpeace Indonesia 2024 | Kecuali dinyatakan sebaliknya, salinan situs web dilisensikan dengan Lisensi Internasional CC-BY</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

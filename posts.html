@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Halaman Posts</title>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-green-500 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Greenpeace Indonesia</h1>
+            <nav class="space-x-6">
+                <a href="index.html" class="hover:text-gray-300">Beranda</a>
+                <a href="biodata.html" class="hover:text-gray-300">Biodata</a>
+                <a href="contact_us.html" class="hover:text-gray-300">Hubungi Kami</a>
+                <a href="free_content.html" class="hover:text-gray-300">Halaman Gratis</a>
+                <a href="posts.html" class="hover:text-gray-300">Posts</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">Halaman Posts</h2>
+
+        <!-- Posts Container -->
+        <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards akan muncul di sini -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-500 text-white text-center py-4 mt-12">
+        <p>&copy; 2024 Greenpeace Indonesia. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // Mengambil data dari API menggunakan Fetch API
+        const postsContainer = document.getElementById('posts-container');
+        const nimLastTwoDigits = '25'; // Ganti dengan dua digit terakhir NIM Anda
+        const url = `https://jsonplaceholder.typicode.com/posts/${nimLastTwoDigits}`;
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Data tidak ditemukan');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Menampilkan data dalam format kartu
+                const postCard = `
+                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">ID Kiriman: ${data.id}</h3>
+                        <h4 class="text-lg font-semibold text-gray-700 mb-2">Judul: ${data.title}</h4>
+                        <p class="text-gray-600">Tubuh: ${data.body}</p>
+                    </div>
+                `;
+
+                postsContainer.innerHTML = postCard;
+            })
+            .catch(error => {
+                postsContainer.innerHTML = `<p class="text-red-500">Terjadi kesalahan: ${error.message}</p>`;
+            });
+    </script>
+
+</body>
+
+</html>

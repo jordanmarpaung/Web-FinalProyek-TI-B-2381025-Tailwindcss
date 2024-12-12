@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.webp" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hubungi Kami</title>
+</head>
+
+<body class="bg-green-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-green-500 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Greenpeace Indonesia</h1>
+            <nav class="space-x-6">
+                <a href="index.html" class="hover:text-gray-300">Beranda</a>
+                <a href="biodata.html" class="hover:text-gray-300">Biodata</a>
+                <a href="contact.html" class="hover:text-gray-300">Hubungi Kami</a>
+                <a href="free_content.html" class="hover:text-gray-300">Halaman Gratis</a>
+                <a href="posts.html" class="hover:text-gray-300">Posts</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Hubungi Kami</h2>
+        <form id="contact-form" action="#" method="post" class="space-y-6">
+            <div>
+                <label for="first-name" class="block text-lg">Nama Depan:</label>
+                <input type="text" id="first-name" name="first-name" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div>
+                <label for="last-name" class="block text-lg">Nama Keluarga:</label>
+                <input type="text" id="last-name" name="last-name" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div>
+                <label for="email" class="block text-lg">Email:</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div>
+                <label for="phone" class="block text-lg">Nomor Telepon:</label>
+                <input type="text" id="phone" name="phone" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div>
+                <label for="username" class="block text-lg">Nama Pengguna:</label>
+                <input type="text" id="username" name="username" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div>
+                <label for="password" class="block text-lg">Kata Sandi:</label>
+                <input type="password" id="password" name="password" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div>
+                <label class="block text-lg">Jenis Kelamin:</label>
+                <input type="radio" id="male" name="gender" value="male" class="mr-2">
+                <label for="male" class="mr-4">Pria</label>
+                <input type="radio" id="female" name="gender" value="female" class="mr-2">
+                <label for="female">Wanita</label>
+            </div>
+
+            <div>
+                <label for="dob" class="block text-lg">Tanggal Lahir:</label>
+                <input type="date" id="dob" name="dob" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <div>
+                <label for="religion" class="block text-lg">Agama:</label>
+                <select id="religion" name="religion" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="Islam">Islam</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Buddha">Buddha</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="address" class="block text-lg">Alamat:</label>
+                <textarea id="address" name="address" required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+            </div>
+
+            <div>
+                <label class="block text-lg">Hobi:</label>
+                <input type="checkbox" id="hobby1" name="hobby" value="Olahraga" class="mr-2">
+                <label for="hobby1" class="mr-4">Olahraga</label>
+                <input type="checkbox" id="hobby2" name="hobby" value="Membaca" class="mr-2">
+                <label for="hobby2" class="mr-4">Membaca</label>
+                <input type="checkbox" id="hobby3" name="hobby" value="Berpetualang" class="mr-2">
+                <label for="hobby3">Berpetualang</label>
+            </div>
+
+            <div>
+                <button type="submit"
+                    class="w-full bg-green-500 text-white p-3 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    Simpan
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-500 text-white text-center py-4 mt-12">
+        <p>&copy; 2024 Greenpeace Indonesia. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Validate Email
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Email tidak valid');
+                return;
+            }
+
+            // Validate Phone
+            const phone = document.getElementById('phone').value;
+            const phoneRegex = /^[0-9]{10,}$/; // Minimum 10 digits
+            if (!phoneRegex.test(phone)) {
+                alert('Nomor telepon hanya boleh angka dan panjang minimal 10 digit');
+                return;
+            }
+
+            // Check all required fields
+            const requiredFields = document.querySelectorAll('[required]');
+            for (let field of requiredFields) {
+                if (!field.value) {
+                    alert('Semua bidang wajib diisi');
+                    return;
+                }
+            }
+
+            // Form submission successful
+            alert('Formulir berhasil disubmit!');
+            form.reset(); // Clear the form after successful submission
+        });
+
+        // Highlight input on focus
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.classList.add('focus:ring-2', 'focus:ring-green-500');
+            });
+            input.addEventListener('blur', () => {
+                input.classList.remove('focus:ring-2', 'focus:ring-green-500');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
